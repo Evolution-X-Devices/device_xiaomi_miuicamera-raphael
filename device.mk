@@ -7,6 +7,10 @@
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/miuicamera/miuicamera-vendor.mk)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    MiuiCameraOverlay
+
 # MiuiCamera permission
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml \
